@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Application Manager</title>
+  <!-- Bootstrap CSS -->
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous"
+  >
+  <link rel="stylesheet" href="styles/appManager.css">
+  <script
+    defer
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    defer
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    defer
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"
+  ></script>
+  <script defer src="scripts/appManager.js"></script>
+</head>
+<body>
+<form action="#" method="post" id="appForm" class="mx-auto w-25 pt-4">
+  <fieldset class="form-group">
+    <legend class="font-weight-bold">Application</legend>
+    <div class="form-group">
+      <label for="name">Name</label> <input type="text" id="name" name="name" class="form-control" placeholder="John Smith" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email address</label> <input
+      type="email"
+      id="email"
+      name="email"
+      class="form-control"
+      placeholder="Enter email"
+      required
+    >
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm pl-0">
+          <label for="age">Age</label> <input type="number" class="form-control" id="age" name="age" placeholder="Age" required>
+        </div>
+        <div class="col-sm pr-0">
+          <label for="tel">Telephone</label> <input
+          type="tel"
+          class="form-control"
+          id="tel"
+          name="tel"
+          placeholder="1-(555)-555-5555"
+          required
+        >
+        </div>
+      </div>
+    </div>
+    <!-- Communication Radio Buttons -->
+    <fieldset class="form-group">
+      <legend class="col-form-label pt-3">Preferred Way of Communication</legend>
+      <div class="btn-group btn-group-toggle" data-toggle="buttons">
+        <label class="btn btn-secondary"> <input
+          type="radio"
+          name="commMethod"
+          value="Email"
+          id="emailComm"
+          autocomplete="off"
+          required
+        > Email </label> <label class="btn btn-secondary"> <input
+        type="radio"
+        name="commMethod"
+        value="Phone"
+        id="phoneComm"
+        autocomplete="off"
+      > Phone </label>
+      </div>
+    </fieldset>
+    <div class="container">
+      <div class="row">
+        <!-- English Level -->
+        <div class="col-sm pl-0">
+          <label for="engLevel">English Level</label> <select class="form-control" id="engLevel" required>
+          <option disabled selected value> -- select an option --</option>
+          <option value="A1">A1</option>
+          <option value="A2">A2</option>
+          <option value="B1">B1</option>
+          <option value="B2">B2</option>
+          <option value="C1">C1</option>
+          <option value="C2">C2</option>
+        </select>
+        </div>
+        <!-- Available to Start -->
+        <div class="col-sm pr-0">
+          <label for="startDate">Available to Start</label>
+          <div class="form-group">
+            <input class="form-control" type="date" id="startDate" name="startDate" required>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Technical Skills and Courses  -->
+    <div class="form-group">
+      <label for="skills">Technical Skills and Courses </label> <input type="text" class="form-control" id="skills" name="skills" required>
+    </div>
+    <!-- Short Personal Presentation -->
+    <div class="form-group">
+      <label for="present">Short Personal Presentation </label> <textarea
+      class="form-control"
+      id="present"
+      name="present"
+      rows="2"
+      required
+    ></textarea>
+    </div>
+    <!-- "Study from home" -->
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="homeStudy" name="homeStudy"> <label
+      class="form-check-label"
+      for="homeStudy"
+    > Study from home </label>
+    </div>
+    <div class="d-flex flex-row">
+      <button type="submit" class="btn btn-primary mt-2 mr-auto p-2">Submit</button>
+      <button id="edit" class="btn btn-primary mt-2 px-4">Edit</button>
+    </div>
+  </fieldset>
+</form>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+
+<div class="container" id="data-holder">
+</div>
+
+</body>
+</html>
