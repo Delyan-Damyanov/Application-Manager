@@ -1,4 +1,4 @@
-# Application-Manager-
+# Application-Manager
 Local Storage Exercise
 
 A client needs a system for managing students applications. There is only one entity called Application.
